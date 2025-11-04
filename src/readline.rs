@@ -139,7 +139,8 @@ pub fn create_readline(ctx: FunctionContext, fix: usize) -> Editor<RLHelper, Fil
         .edit_mode(EditMode::Emacs)
         .history_ignore_space(true)
         .completion_type(CompletionType::Circular)
-        .max_history_size(1000).expect("REASON")
+        .max_history_size(1000)
+        .expect("REASON")
         .build();
     let mut rl = Editor::with_config(config).unwrap();
     let h = RLHelper {

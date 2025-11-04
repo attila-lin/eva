@@ -5,8 +5,8 @@
 use clap::builder::{EnumValueParser, RangedU64ValueParser};
 use clap::{Arg, Command};
 use directories::{ProjectDirs, UserDirs};
+use eva::eval_expr;
 use eva::lex::{AngleUnit, FunctionContext};
-use eva::{eval_expr};
 use once_cell::sync::Lazy;
 use rustyline::error::ReadlineError;
 use std::fs::create_dir_all;
